@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.demo</groupId>
+        <artifactId>domain-persistence-dependencies</artifactId>
+        <version>${revision}</version>
+        <relativePath>../../domain-persistence-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>domain-persistence-get-persistence-service</artifactId>
+    <version>${get-persistence.version}</version>
+    <name>domain-persistence-get-persistence-service</name>
+    <packaging>jar</packaging>
+    <description>获取持久化对象的管理的实现</description>
+
+    <dependencies>
+        <!-- Project Begin -->
+        <dependency>
+            <groupId>com.demo</groupId>
+            <artifactId>domain-persistence-mybatis-common</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.demo</groupId>
+            <artifactId>domain-persistence-get-persistence-api</artifactId>
+            <version>${get-persistence.version}</version>
+        </dependency>
+        <!-- Project End -->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.demo.domain.persistence.get.persistence.service.GetPersistenceServiceApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

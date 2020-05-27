@@ -1,0 +1,33 @@
+list-persistence:
+  service:
+    version: 1.0.0
+nacos:
+  host: 192.168.42.7
+  port: 8848
+  username: nacos
+  password: nacos
+
+spring:
+  application:
+    name: domain-persistence-list-persistence-declare-service
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/domaintransfer?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+dubbo:
+  scan:
+    base-packages: com.demo.domain.persistence.list.persistence.declare.service.service
+  #协议
+  protocol:
+    name: dubbo
+    #自动分配端口号
+    port: -1
+    serialization: kryo
+  registry:
+    address: nacos://${nacos.host}:${nacos.port}/?username=${nacos.username}&password=${nacos.password}
+#server:
+#  port: 8080
+#endpoints:
+#  dubbo:
+#    enabled: true

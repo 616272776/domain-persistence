@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.demo</groupId>
+        <artifactId>domain-persistence-dependencies</artifactId>
+        <version>${revision}</version>
+        <relativePath>../domain-persistence-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>domain-persistence-entity-common</artifactId>
+    <version>${revision}</version>
+    <name>domain-persistence-entity-common</name>
+    <packaging>jar</packaging>
+    <description>API接口需要知道实体类</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+</project>
