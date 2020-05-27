@@ -11,16 +11,20 @@
     <description>全局依赖</description>
 
     <properties>
+        <!-- java编译配置 -->
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <baomidou-mybatis.version>3.3.1.tmp</baomidou-mybatis.version>
+        <!-- 项目配置 -->
         <revision>1.0.0-SNAPSHOT</revision>
         <get-persistence.version>1.0.0-SNAPSHOT</get-persistence.version>
         <list-persistence-declare.version>1.0.0-SNAPSHOT</list-persistence-declare.version>
+        <list-persistence-guide.version>1.0.0-SNAPSHOT</list-persistence-guide.version>
+        <get-persistence-guide.version>1.0.0-SNAPSHOT</get-persistence-guide.version>
 
+        <baomidou-mybatis.version>3.3.1.tmp</baomidou-mybatis.version>
         <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
         <spring-cloud.version>Greenwich.SR5</spring-cloud.version>
         <spring-boot.version>2.2.6.RELEASE</spring-boot.version>

@@ -7,28 +7,23 @@
         <groupId>com.demo</groupId>
         <artifactId>domain-persistence-dependencies</artifactId>
         <version>${revision}</version>
-        <relativePath>../domain-persistence-dependencies/pom.xml</relativePath>
+        <relativePath>../../domain-persistence-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>domain-persistence-entity-common</artifactId>
-    <version>${revision}</version>
-    <name>domain-persistence-entity-common</name>
-    <packaging>jar</packaging>
-    <description>API接口需要知道实体类</description>
+    <artifactId>domain-persistence-get-persistence-guide-service</artifactId>
+    <version>${get-persistence.version</version>
+
 
     <dependencies>
         <dependency>
             <groupId>com.demo</groupId>
-            <artifactId>domain-persistence-common</artifactId>
+            <artifactId>domain-persistence-entity-common</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <groupId>com.demo</groupId>
+            <artifactId>domain-persistence-get-persistence-guide-api</artifactId>
+            <version>${get-persistence-guide.version}</version>
         </dependency>
     </dependencies>
 </project>

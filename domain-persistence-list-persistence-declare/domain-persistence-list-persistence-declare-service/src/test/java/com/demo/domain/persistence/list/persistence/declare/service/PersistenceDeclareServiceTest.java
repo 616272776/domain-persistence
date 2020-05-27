@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.HashMap;
 
-@SpringBootTest(classes = ListPersistenceDeclareServiceApplication.class)
+@SpringBootTest(classes = ListPersistenceDeclareApplication.class)
 @RunWith(SpringRunner.class)
 
 public class PersistenceDeclareServiceTest {

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.demo</groupId>
+        <artifactId>domain-persistence-dependencies</artifactId>
+        <version>${revision}</version>
+        <relativePath>../domain-persistence-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>domain-persistence-get-persistence-guide</artifactId>
+    <version>${get-persistence-guide.version}</version>
+    <name>domain-persistence-get-persistence-guide</name>
+    <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>domain-persistence-get-persistence-guide-api</module>
+        <module>domain-persistence-get-persistence-guide-service</module>
+    </modules>
+</project>

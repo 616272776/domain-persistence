@@ -47,7 +47,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.demo.domain.persistence.list.persistence.declare.service.ListPersistenceDeclareServiceApplication</mainClass>
+                    <mainClass>com.demo.domain.persistence.list.persistence.declare.service.ListPersistenceDeclareApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

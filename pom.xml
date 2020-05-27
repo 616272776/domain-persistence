@@ -15,8 +15,10 @@
         <module>domain-persistence-common</module>
         <module>domain-persistence-entity-common</module>
         <module>domain-persistence-mybatis-common</module>
+        <module>domain-persistence-list-persistence-guide</module>
         <module>domain-persistence-get-persistence</module>
         <module>domain-persistence-list-persistence-declare</module>
+        <module>domain-persistence-get-persistence-guide</module>
     </modules>
 
 </project>
