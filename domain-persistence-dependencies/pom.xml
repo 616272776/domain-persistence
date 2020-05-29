@@ -23,6 +23,11 @@
         <list-persistence-declare.version>1.0.0-SNAPSHOT</list-persistence-declare.version>
         <list-persistence-guide.version>1.0.0-SNAPSHOT</list-persistence-guide.version>
         <get-persistence-guide.version>1.0.0-SNAPSHOT</get-persistence-guide.version>
+        <persistence-operation-list.version>1.0.0-SNAPSHOT</persistence-operation-list.version>
+        <persistence-operation-save.version>1.0.0-SNAPSHOT</persistence-operation-save.version>
+        <persistence-operation-update.version>1.0.0-SNAPSHOT</persistence-operation-update.version>
+        <persistence-operation-transaction.version>1.0.0-SNAPSHOT</persistence-operation-transaction.version>
+        <template-entity.version.version>1.0.0-SNAPSHOT</template-entity.version.version>
 
         <baomidou-mybatis.version>3.3.1.tmp</baomidou-mybatis.version>
         <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>

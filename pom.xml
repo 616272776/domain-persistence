@@ -19,6 +19,9 @@
         <module>domain-persistence-get-persistence</module>
         <module>domain-persistence-list-persistence-declare</module>
         <module>domain-persistence-get-persistence-guide</module>
+
+        <module>domain-persistence-persistence-operation-list</module>
+        <module>domain-persistence-template-entity</module>
     </modules>
 
 </project>

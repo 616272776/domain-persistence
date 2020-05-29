@@ -3,6 +3,7 @@ package com.demo.domain.persistence.list.persistence.declare.service.service.imp
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.demo.domain.persistence.entity.common.entity.DomainDeclareEntity;
+import com.demo.domain.persistence.entity.common.entity.DomainEntity;
 import com.demo.domain.persistence.entity.common.entity.PersistenceDeclareEntity;
 
 import com.demo.domain.persistence.entity.common.entity.PersistenceEntity;
@@ -32,34 +33,36 @@ public class ListPersistenceServiceImpl implements ListPersistenceService {
     /**
      * 根据领域说明对象查询持久化对象(组合)
      *
-     * @param domainDeclareEntity 领域对象说明
+     * @param domainEntity 领域对象
      * @return 持久化对象（组合）
      */
     @Override
-    public PageUtils listPersistenceDeclare(DomainDeclareEntity domainDeclareEntity, Map<String, Object> params) {
+    public List<PersistenceEntity> listPersistenceDeclare(DomainEntity domainEntity) {
 
         // 封装条件
         QueryWrapper<PersistenceDeclareEntity> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("domain_declare_id", domainDeclareEntity.getDomainDeclareId());
+        queryWrapper.eq("domain_declare_id", domainEntity.getDomainDeclareId());
 
-        // 查询列表
-        IPage<PersistenceDeclareEntity> page = persistenceDeclareService.page(
-                new Query<PersistenceDeclareEntity>().getPage(params),
-                queryWrapper
-        );
+//        // 查询列表
+//        IPage<PersistenceDeclareEntity> page = persistenceDeclareService.page(
+//                new Query<PersistenceDeclareEntity>().getPage(params),
+//                queryWrapper
+//        );
 
-        // 根据持久化声明对象查询持久化对象
-        List<PersistenceDeclareEntity> persistenceDeclareEntityList = page.getRecords();
+        List<PersistenceDeclareEntity> persistenceDeclareEntityList = persistenceDeclareService.list(queryWrapper);
+
+//        // 根据持久化声明对象查询持久化对象
+//        List<PersistenceDeclareEntity> persistenceDeclareEntityList = page.getRecords();
         List<PersistenceEntity> persistenceEntityList = persistenceDeclareEntityList.stream().map((persistenceDeclareEntity -> {
 
             // 调用查询持久化对象微服务
             PersistenceEntity persistence = getPersistenceService.getPersistence(persistenceDeclareEntity);
             return persistence;
         })).collect(Collectors.toList());
-
-        // 封装查询的结果
-        PageUtils pageUtils = new PageUtils(page);
-        pageUtils.setList(persistenceEntityList);
-        return pageUtils;
+//
+//        // 封装查询的结果
+//        PageUtils pageUtils = new PageUtils(page);
+//        pageUtils.setList(persistenceEntityList);
+        return persistenceEntityList;
     }
 }

@@ -32,5 +32,10 @@
             <artifactId>domain-persistence-list-persistence-declare-api</artifactId>
             <version>${list-persistence-declare.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.demo</groupId>
+            <artifactId>domain-persistence-get-persistence-guide-api</artifactId>
+            <version>${get-persistence-guide.version}</version>
+        </dependency>
     </dependencies>
 </project>

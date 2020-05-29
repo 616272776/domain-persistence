@@ -1,6 +1,7 @@
 package com.demo.domain.persistence.entity.common.param;
 
 import com.demo.domain.persistence.entity.common.entity.DomainDeclareEntity;
+import com.demo.domain.persistence.entity.common.entity.DomainEntity;
 import com.demo.domain.persistence.entity.common.entity.PersistenceEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,7 +18,7 @@ public class PersistenceOperationParam {
     /**
      * 领域对象
      */
-    private DomainDeclareEntity domainDeclareEntity;
+    private DomainEntity domainEntity;
 
     /**
      * 持久化对象
