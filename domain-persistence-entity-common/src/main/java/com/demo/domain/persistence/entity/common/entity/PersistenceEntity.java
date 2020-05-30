@@ -43,11 +43,11 @@ public class PersistenceEntity implements Serializable {
 	/**
 	 * 持久对象描述
 	 */
-	private String domainDescribe;
+	private String persistenceDescribe;
 	/**
 	 * 数据提取方式
 	 */
-	private String extractway;
+	private String extractWay;
 	/**
 	 * 数据存储位置
 	 */
