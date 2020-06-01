@@ -3,11 +3,19 @@ package com.demo.domain.persistence.list.persistence.guide.service.service;
 import com.demo.domain.persistence.entity.common.entity.DomainEntity;
 import com.demo.domain.persistence.entity.common.enums.OperationTypeEnum;
 import com.demo.domain.persistence.entity.common.param.OperationDescription;
-import com.demo.domain.persistence.entity.common.param.SaveCondition;
+import com.demo.domain.persistence.entity.common.param.PersistenceOperationGuide;
 import com.demo.domain.persistence.list.persistence.guide.api.DomainOperationService;
+import com.demo.domain.persistence.list.persistence.guide.service.ListPersistenceGuideApplication;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
+@SpringBootTest(classes = ListPersistenceGuideApplication.class)
+@RunWith(SpringRunner.class)
 class DomainOperationServiceImplTest {
 
     @Autowired
@@ -27,11 +35,10 @@ class DomainOperationServiceImplTest {
         OperationDescription operationDescription = new OperationDescription();
         operationDescription.setOperationTypeEnum(OperationTypeEnum.INSERT);
 
-        SaveCondition saveCondition = new SaveCondition();
-        saveCondition.setData("            {\n" +
+        String domainData = "            {\n" +
                 "                \"formId\": 1265539626123145217,\n" +
                 "                \"templateId\": 1,\n" +
-                "                \"formItemVOList\": [\n" +
+                "                \"formItem\": [\n" +
                 "                    {\n" +
                 "                        \"formItemId\": 1265539626156699650,\n" +
                 "                        \"formId\": 1265539626123145217,\n" +
@@ -54,12 +61,11 @@ class DomainOperationServiceImplTest {
                 "                        \"fieldType\": 0\n" +
                 "                    }\n" +
                 "                ]\n" +
-                "            }");
+                "            }";
 
-        operationDescription.setAbstractCondition(new SaveCondition());
+        operationDescription.setDomainData(domainData);
 
-
-
-
+        List<PersistenceOperationGuide> persistenceOperationGuideList = domainOperationService.listPersistenceOperation(domainEntity, operationDescription);
+        System.out.println(persistenceOperationGuideList);
     }
 }

@@ -21,6 +21,13 @@
             <groupId>com.demo</groupId>
             <artifactId>domain-persistence-entity-common</artifactId>
             <version>${revision}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>mybatis-plus-boot-starter</artifactId>
+                    <groupId>com.baomidou</groupId>
+                </exclusion>
+            </exclusions>
+
         </dependency>
         <dependency>
             <groupId>com.demo</groupId>

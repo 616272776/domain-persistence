@@ -27,7 +27,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
         <!-- Spring Boot End -->
-
+        <!-- Alibaba Begin -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!-- Alibaba End -->
         <!-- Apache Dubbo Begin -->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
@@ -46,12 +51,17 @@
             <artifactId>nacos-client</artifactId>
         </dependency>
         <!-- apache 序列化 -->
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-serialization-kryo</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.dubbo</groupId>-->
+            <!--<artifactId>dubbo-serialization-kryo</artifactId>-->
+        <!--</dependency>-->
         <!-- Apache Dubbo End -->
-
+        <!-- CGlib Begin -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+        </dependency>
+        <!-- CGlib End -->
     </dependencies>
 
 </project>

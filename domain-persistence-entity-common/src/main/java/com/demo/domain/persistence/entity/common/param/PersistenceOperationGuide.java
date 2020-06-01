@@ -5,12 +5,14 @@ import com.demo.domain.persistence.entity.common.entity.PersistenceEntity;
 import com.demo.domain.persistence.entity.common.enums.OperationTypeEnum;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * 持久化对象具体操作指导
  * @author Administrator
  */
 @Data
-public class PersistenceOperationGuide {
+public class PersistenceOperationGuide implements Serializable {
 
     /**
      * 持久化对象

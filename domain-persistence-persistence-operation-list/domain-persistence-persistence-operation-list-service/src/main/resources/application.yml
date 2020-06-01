@@ -23,7 +23,7 @@ dubbo:
     name: dubbo
     #自动分配端口号
     port: -1
-    serialization: kryo
+#    serialization: kryo
   registry:
     address: nacos://${nacos.host}:${nacos.port}/?username=${nacos.username}&password=${nacos.password}
 #server:

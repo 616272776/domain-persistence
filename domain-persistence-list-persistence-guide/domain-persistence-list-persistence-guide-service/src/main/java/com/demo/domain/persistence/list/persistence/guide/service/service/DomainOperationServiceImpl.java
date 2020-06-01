@@ -5,18 +5,16 @@ import com.demo.domain.persistence.entity.common.entity.PersistenceEntity;
 import com.demo.domain.persistence.entity.common.param.OperationDescription;
 import com.demo.domain.persistence.entity.common.param.PersistenceOperationGuide;
 import com.demo.domain.persistence.entity.common.param.PersistenceOperationParam;
-import com.demo.domain.persistence.entity.common.utils.PageUtils;
 import com.demo.domain.persistence.get.persistence.guide.api.PersistenceGuideService;
 import com.demo.domain.persistence.list.persistence.declare.api.ListPersistenceService;
 import com.demo.domain.persistence.list.persistence.guide.api.DomainOperationService;
 import org.apache.dubbo.config.annotation.Reference;
-import org.springframework.stereotype.Service;
+import org.apache.dubbo.config.annotation.Service;
 
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
-@Service
+@Service(version = "1.0.0")
 public class DomainOperationServiceImpl implements DomainOperationService {
 
     @Reference(version = "1.0.0")
@@ -42,7 +40,7 @@ public class DomainOperationServiceImpl implements DomainOperationService {
             PersistenceOperationGuide persistenceOperation = persistenceGuideService.getPersistenceOperation(persistenceOperationParam);
             return persistenceOperation;
         }).collect(Collectors.toList());
-
         return persistenceOperationGuideList;
     }
 }
+

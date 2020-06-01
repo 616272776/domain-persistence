@@ -6,13 +6,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
  * 持久化对象操作生成单元入参
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PersistenceOperationParam {
+public class PersistenceOperationParam implements Serializable {
 
     /**
      * 领域对象
@@ -29,5 +31,5 @@ public class PersistenceOperationParam {
      */
     private OperationDescription operationDescription;
 
-    private String domainData;
+
 }

@@ -29,12 +29,6 @@
             <version>${revision}</version>
         </dependency>
         <!-- Project End -->
-        <!-- Alibaba Begin -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <!-- Alibaba End -->
         <!-- Tools Begin -->
         <dependency>
             <groupId>org.projectlombok</groupId>

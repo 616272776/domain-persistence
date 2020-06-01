@@ -9,15 +9,10 @@ nacos:
 
 spring:
   application:
-    name: domain-persistence-list-persistence-declare-service
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/domaintransfer?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
-    username: root
-    password: root
+    name: domain-persistence-get-persistence-guide-service
 dubbo:
   scan:
-    base-packages: com.demo.domain.persistence.list.persistence.declare.service.service
+    base-packages: com.demo.domain.persistence.get.persistence.guide.service.service
   #协议
   protocol:
     name: dubbo

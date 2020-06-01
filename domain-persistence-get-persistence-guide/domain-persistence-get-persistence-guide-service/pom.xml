@@ -15,16 +15,24 @@
 
 
     <dependencies>
+        <!-- Project Begin -->
         <dependency>
             <groupId>com.demo</groupId>
             <artifactId>domain-persistence-entity-common</artifactId>
             <version>${revision}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.baomidou</groupId>
+                    <artifactId>mybatis-plus-boot-starter</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.demo</groupId>
             <artifactId>domain-persistence-get-persistence-guide-api</artifactId>
             <version>${get-persistence-guide.version}</version>
         </dependency>
+        <!-- Project End -->
         <!-- Json Begin -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
